@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity2"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/reset2"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Password"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="50dp"
+        android:fontFamily="@font/gladifilthefte"
+        android:textColor="#FF0000">
+    </TextView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new password: "
+            android:textSize="25dp"
+            android:fontFamily="@font/gladifilthefte"
+            android:textColor="#FAFAFA">
+        </TextView>
+
+        <EditText
+            android:id="@+id/reset_password_edt"
+            android:layout_width="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_height="50dp"
+            android:hint="Enter New Password Here">
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="70sp"
+            android:text="confirm\npassword: "
+            android:textSize="25dp"
+            android:fontFamily="@font/gladifilthefte"
+            android:textColor="#FBFBFB">
+        </TextView>
+
+        <EditText
+            android:id="@+id/reset_confirm_edt"
+            android:layout_width="wrap_content"
+            android:inputType="textPassword"
+            android:layout_height="70dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+
+            android:hint="Enter New Password Here">
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset_password_btn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gladifilthefte"
+            android:backgroundTint="#596FE9"
+            android:text="Reset Password"
+            android:textColor="#ffffff"
+            android:textSize="20sp">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset_back_btn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="#596FE9"
+            android:textSize="20sp"
+            android:fontFamily="@font/gladifilthefte"
+            android:textColor="#ffffff">
+        </Button>
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

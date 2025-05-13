@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/adminbackbtn"
+            android:layout_width="80dp"
+            android:layout_height="52dp"
+            android:text="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pollPageTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Admin Poll Page"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/adminbackbtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pollTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Poll Title"
+            app:layout_constraintTop_toBottomOf="@id/pollPageTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/pollTitleTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Poll Title"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/pollTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/pollTextText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Poll Description"
+            app:layout_constraintTop_toBottomOf="@id/pollTitleTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/pollDescTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Poll Description"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/pollTextText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/optionsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Enter 4 choices for the poll"
+            app:layout_constraintTop_toBottomOf="@id/pollDescTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Poll Options using Vertical Chain -->
+        <EditText
+            android:id="@+id/option1Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Option 1"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/optionsText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/option2Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Option 2"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/option1Txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/option3Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Option 3"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/option2Txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/option4Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Option 4"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/option3Txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <Switch
+            android:id="@+id/multiSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Can vote multiple times?"
+            app:layout_constraintTop_toBottomOf="@id/option4Txt"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/startbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Start Poll"
+            app:layout_constraintTop_toBottomOf="@id/multiSwitch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PollResultsActivity"
+    android:background = "@drawable/verification"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/pollTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poll Title"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/gladifilthefte"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/multiChoiceAvailability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiple Choice is Possible"
+        android:textSize="25dp"
+        android:fontFamily="@font/lato"
+        android:backgroundTint="#FF5722"
+        app:layout_constraintTop_toBottomOf="@id/pollTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/topAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Answer"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/gladifilthefte"
+        android:backgroundTint="#FF5722"
+        app:layout_constraintTop_toBottomOf="@id/multiChoiceAvailability"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/resultsBackBtn"-->
+<!--        android:layout_width="87dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="Back"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <Button
+        android:id="@+id/option1Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="option1"
+        android:textSize="30sp"
+        android:fontFamily="@font/shockwave"
+        android:backgroundTint="#FF5722"
+        app:layout_constraintTop_toBottomOf="@id/topAnswer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/option2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="option2"
+        android:textSize="30sp"
+        android:fontFamily="@font/shockwave"
+        android:backgroundTint="#FF5722"
+        app:layout_constraintTop_toBottomOf="@id/option1Btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/option3Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="option3"
+        android:textSize="30sp"
+        android:fontFamily="@font/shockwave"
+        android:backgroundTint="#FF5722"
+        app:layout_constraintTop_toBottomOf="@id/option2Btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/option4Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="option4"
+        android:textSize="30sp"
+        android:fontFamily="@font/shockwave"
+        android:backgroundTint="#FF5722"
+        app:layout_constraintTop_toBottomOf="@id/option3Btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/removeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remove Vote"
+        android:textSize="30sp"
+        android:fontFamily="@font/shockwave"
+        android:backgroundTint="#FFC107"
+        app:layout_constraintTop_toBottomOf="@id/option4Btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/pollBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="30sp"
+        android:fontFamily="@font/shockwave"
+        android:backgroundTint="#8BC34A"
+        app:layout_constraintTop_toBottomOf="@id/removeBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

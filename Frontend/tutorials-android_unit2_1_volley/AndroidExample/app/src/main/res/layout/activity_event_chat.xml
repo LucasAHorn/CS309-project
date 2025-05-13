@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".EventChatActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/history">
+
+    <!--Message Input and Send button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:background="@drawable/timer_background">
+
+        <TextView
+            android:id="@+id/timerTv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:elevation="2dp"
+            android:padding="10dp"
+            android:text="10 Minutes Timer"
+            android:fontFamily="@font/shockwave"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+        <Button
+            android:id="@+id/reportBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/gladifilthefte"
+            android:padding="10dp"
+            android:text="Report"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/startTimerBtn"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:text="Start"
+            android:fontFamily="@font/gladifilthefte"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_marginLeft="0dp"/>
+
+        <Button
+            android:id="@+id/goBackBtn3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="Back"
+            android:backgroundTint="#41C7BA"
+            android:fontFamily="@font/gladifilthefte"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_marginLeft="0dp"/>
+
+
+    </LinearLayout>
+
+
+    <!-- Chat Display Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:background="@color/black">
+
+    <TextView
+            android:id="@+id/tx1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Study Session Group Chat"
+            android:fontFamily="@font/oswald"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:elevation="2dp"
+            android:textAlignment="center"/>
+
+    </ScrollView>
+
+    <!--Message Input and Send button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:background="@drawable/message_input_background">
+
+    <EditText
+            android:id="@+id/msgEdt"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:hint="Enter a message..."
+            android:fontFamily="@font/caster"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:text="Send"
+            android:textSize="20sp"
+            android:fontFamily="@font/gladifilthefte"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

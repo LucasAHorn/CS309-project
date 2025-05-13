@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group Name"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="14sp"
+            android:textColor="#666"/>
+        <Button
+            android:id="@+id/btnGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="View Group Members"
+            android:padding="4dp"/>
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="end"-->
+<!--            android:paddingTop="8dp">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnGroup"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="12sp"-->
+<!--                android:text="View Group"-->
+<!--                android:padding="4dp"/>-->
+
+
+<!--            <Button-->
+<!--                android:id="@+id/btnAddMember"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Add Member"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:padding="4dp"/>-->
+<!--            <Button-->
+<!--                android:id="@+id/btnDeleteMember"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Delete Member"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:padding="4dp"/>-->
+<!--            <Button-->
+<!--                android:id="@+id/btnDelete"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Delete"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:padding="4dp"/>-->
+
+
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

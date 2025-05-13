@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/demoteModeratorBtn"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Demote Moderator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promoteModeratorbtn" />
+
+    <Button
+        android:id="@+id/deleteGroupBtn"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Delete Group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promoteAdminbtn"></Button>
+
+    <Button
+        android:id="@+id/promoteAdminbtn"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Promote to Admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/demoteModeratorBtn" />
+
+    <Button
+        android:id="@+id/promoteModeratorbtn"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Promote to Moderator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteMemberbtn"></Button>
+
+    <Button
+        android:id="@+id/addMemberbtn"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:text="Add Member"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameChange"></Button>
+
+    <TextView
+        android:id="@+id/memberChangeTxt"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="224dp"
+        android:text="Enter the name of the user"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/memNameChange"
+        android:layout_width="408dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#996E6E"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberChangeTxt" />
+
+    <Button
+        android:id="@+id/deleteMemberbtn"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Delete Member"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberbtn" />
+
+    <TextView
+        android:id="@+id/groupEditTitleText"
+        android:layout_width="349dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="64dp"
+        android:text="Group Title"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

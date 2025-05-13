@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/membersText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/memNameTxt10"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt9" />
+
+    <TextView
+        android:id="@+id/memNameTxt9"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt8" />
+
+    <TextView
+        android:id="@+id/memNameTxt8"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt7" />
+
+    <TextView
+        android:id="@+id/memNameTxt7"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt6" />
+
+    <TextView
+        android:id="@+id/memNameTxt6"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt5" />
+
+    <TextView
+        android:id="@+id/memNameTxt5"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt4" />
+
+    <TextView
+        android:id="@+id/memNameTxt4"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt3" />
+
+    <TextView
+        android:id="@+id/memText"
+        android:layout_width="322dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="164dp"
+        android:text="Members"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modText" />
+
+    <TextView
+        android:id="@+id/memNameTxt2"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt1" />
+
+    <TextView
+        android:id="@+id/memNameTxt1"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memText" />
+
+    <TextView
+        android:id="@+id/memNameTxt3"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="memName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt2" />
+
+    <TextView
+        android:id="@+id/adminNameTxt"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:text="adminName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminText" />
+
+    <TextView
+        android:id="@+id/modText"
+        android:layout_width="322dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="36dp"
+        android:text="Moderators"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminText" />
+
+    <TextView
+        android:id="@+id/modNameTxt4"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:text="modName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modNameTxt3" />
+
+    <TextView
+        android:id="@+id/modNameTxt1"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:text="modName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modText" />
+
+    <TextView
+        android:id="@+id/modNameTxt3"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="modName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modText" />
+
+    <TextView
+        android:id="@+id/modNameTxt5"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:text="modName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modNameTxt4" />
+
+    <TextView
+        android:id="@+id/modNameTxt2"
+        android:layout_width="291dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:text="modName"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modText" />
+
+    <Button
+        android:id="@+id/groupStartBtn"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Start Live Poll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/groupTitleText"
+        android:layout_width="400dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Group Name"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="Next"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/previousbtn"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="Previous"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/editbtn"
+        android:layout_width="194dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="Edit Members"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memNameTxt10" />
+
+    <Button
+        android:id="@+id/groupJoinPollBtn"
+        android:layout_width="139dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:text="Join Live Poll"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnGroupAvail"
+        android:layout_width="146dp"
+        android:layout_height="57dp"
+        android:text="View Group Availability"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/adminText"
+        android:layout_width="322dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:text="Admin"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupTitleText" />
+
+    <TextView
+        android:id="@+id/groupDescText"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupTitleText" />
+
+    <Button
+        android:id="@+id/groupEventBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Events"
+        app:layout_constraintBottom_toTopOf="@+id/groupTitleText"
+        app:layout_constraintEnd_toStartOf="@+id/groupStartBtn"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/btnGroupAvail" />
+
+    <Button
+        android:id="@+id/groupEventRequestBtn"
+        android:layout_width="198dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:text="Event Requests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editbtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

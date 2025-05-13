@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/report"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvInstruction1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:padding="10dp"
+        android:text="To delete message"
+        android:fontFamily="@font/oswald"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/etChatID"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter chatID"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvInstruction1"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/deleteMessageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Message"
+        android:fontFamily="@font/oswald"
+        android:textSize="20sp"
+        android:backgroundTint="#596FE9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etChatID"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvInstruction2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:padding="10dp"
+        android:text="To Ban User"
+        android:fontFamily="@font/oswald"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deleteMessageBtn"
+        android:textSize="28sp"
+        android:layout_marginTop="8dp"/>
+
+
+    <EditText
+        android:id="@+id/etBanUsername"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter username to ban"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvInstruction2"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etBanReason"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter reason"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etBanUsername"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/banUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Ban User"
+        android:backgroundTint="#596FE9"
+        android:fontFamily="@font/oswald"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etBanReason"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvInstruction3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:padding="10dp"
+        android:text="To Unban User"
+        android:fontFamily="@font/oswald"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banUserBtn"
+        android:textSize="28sp"
+        android:layout_marginTop="8dp"/>
+
+
+    <EditText
+        android:id="@+id/etUnbanUsername"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter username to unban"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvInstruction3"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/unbanUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Unban User"
+        android:backgroundTint="#596FE9"
+        android:fontFamily="@font/oswald"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etUnbanUsername"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:padding="10dp"
+        android:text=""
+        android:fontFamily="@font/oswald"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unbanUserBtn"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/goBackBtn2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Back to Chat"
+        android:backgroundTint="#41C7BA"
+        android:fontFamily="@font/oswald"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        android:layout_marginTop="8dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

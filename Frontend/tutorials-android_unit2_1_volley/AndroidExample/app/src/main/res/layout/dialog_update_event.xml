@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Event Date and Time Picker -->
+    <EditText
+        android:id="@+id/etEventTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Event Time"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"/>
+
+
+    <!-- Title Field -->
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEventTime"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Location Field -->
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Description Field -->
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etLocation"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Capacity Field -->
+    <EditText
+        android:id="@+id/etCapacity"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter Capacity(max participants)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDescription"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Duration Field (in minutes) -->
+    <EditText
+        android:id="@+id/etDuration"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter Duration (Minutes)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCapacity"
+        android:layout_marginTop="8dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

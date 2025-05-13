@@ -1,0 +1,11 @@
+# com.springboot.EventApp file structure:
+- controller
+  - functional API's that can be called
+- model
+  - objects and enums that store data
+- repository
+  - files needed for mysql connections - relates to model/entities
+- service
+  - functions that perform maintenance on the application data
+- util
+  - static functions that are used in multiple parts of the application

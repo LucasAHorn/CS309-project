@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/studyBuddyTitle"
+        android:layout_width="276dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:text="Study Buddy"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sbUser1Txt"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="352dp"
+        android:text="filler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyBuddyTitle"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/sbUser2Txt"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:text="filler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbUser1Txt"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/sbUser3Txt"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:text="filler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbUser2Txt"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/sbSearchBtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbGroupNameTxt" />
+
+    <Button
+        android:id="@+id/sbCreateBtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="132dp"
+        android:text="Create Group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbGroupNameTxt"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/startGroup1Btn"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="Start Study Group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbUser1Txt"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/startGroup2Btn"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="Start Study Group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbUser2Txt"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/startGroup3Btn"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="Start Study Group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbUser3Txt"
+        tools:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/sbGroupNameTxt"
+        android:layout_width="323dp"
+        android:layout_height="57dp"
+        android:background="#3AA6A3A3"
+        android:ems="10"
+        android:hint="Enter the group name here"
+        android:inputType="text"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sbGroupDescriptionTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/sbGroupDescriptionTxt"
+        android:layout_width="323dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="68dp"
+        android:background="#3AA6A3A3"
+        android:ems="10"
+        android:hint="Enter the group description here"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyBuddyTitle"
+        tools:visibility="invisible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

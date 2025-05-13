@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group Chat WebSocket</title>
+</head>
+<body>
+<h1>WebSocket Group Chat</h1>
+
+<div>
+    <label>Group ID: <input type="number" id="groupId" /></label><br>
+    <label>User ID: <input type="number" id="userId" /></label><br>
+    <button onclick="connect()">Connect</button>
+</div>
+
+<hr>
+
+<div>
+    <h3>Send Message</h3>
+    <input type="text" id="chatMessage" placeholder="Your message" />
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<div>
+    <h3>Delete Message</h3>
+    <input type="number" id="removeMsgId" placeholder="Message ID to remove" />
+    <input type="number" id="managerId" placeholder="Manager User ID" />
+    <button onclick="deleteMessage()">Delete</button>
+</div>
+
+<hr>
+
+<h3>Chat Output</h3>
+<pre id="chatLog" style="border:1px solid #ccc; padding: 10px; height: 200px; overflow-y: scroll;"></pre>
+
+<script>
+    let socket;
+
+    function connect() {
+        const groupId = document.getElementById("groupId").value;
+        const userId = document.getElementById("userId").value;
+
+        if (!groupId || !userId) {
+            alert("Enter Group ID and User ID");
+            return;
+        }
+
+        socket = new WebSocket(`ws://localhost:8080/ws/${groupId}?userId=${userId}`);
+
+        socket.onopen = () => log("Connected to WebSocket.");
+        socket.onmessage = (event) => {
+            const data = event.data;
+            log("Received: " + data);
+        };
+        socket.onclose = () => log("WebSocket closed.");
+        socket.onerror = (err) => log("Error: " + err.message);
+    }
+
+    function sendMessage() {
+        const userId = parseInt(document.getElementById("userId").value);
+        const groupId = parseInt(document.getElementById("groupId").value);
+        const message = document.getElementById("chatMessage").value;
+
+        const payload = {
+            userId,
+            groupId,
+            message
+        };
+
+        socket.send(JSON.stringify(payload));
+        log("Sent: " + JSON.stringify(payload));
+    }
+
+    function deleteMessage() {
+        const msgId = parseInt(document.getElementById("removeMsgId").value);
+        const managerId = parseInt(document.getElementById("managerId").value);
+
+        const payload = {
+            removeMsgId: msgId,
+            removeMsg: true,
+            managerId: managerId
+        };
+
+        socket.send(JSON.stringify(payload));
+        log("Sent delete request: " + JSON.stringify(payload));
+    }
+
+    function log(message) {
+        const chatLog = document.getElementById("chatLog");
+        chatLog.textContent += message + "\n";
+        chatLog.scrollTop = chatLog.scrollHeight;
+    }
+</script>
+</body>
+</html>

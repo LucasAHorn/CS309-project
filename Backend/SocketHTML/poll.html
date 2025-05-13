@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll WebSocket Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        #messages {
+            margin-top: 20px;
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            height: 200px;
+            overflow-y: scroll;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Poll WebSocket Client</h2>
+
+<label>Poll ID: <input id="pollId" type="number" /></label>
+<label>User ID: <input id="userId" type="number" /></label>
+<label>Group ID: <input id="groupId" type="number" /></label>
+<label>Vote Option (voteString): <input id="voteString" type="text" oninput="updateSendButton()" /></label>
+<label>Remove Vote: <input id="removeVote" type="text" oninput="updateSendButton()" /></label>
+
+<button onclick="connect()">Connect</button>
+<button id="sendButton" onclick="sendAction()" disabled>Send</button>
+
+<div id="messages"></div>
+
+<script>
+    let socket;
+
+    function log(message) {
+        const msgBox = document.getElementById("messages");
+        msgBox.textContent += message + "\n";
+        msgBox.scrollTop = msgBox.scrollHeight;
+    }
+
+    function connect() {
+        const pollId = document.getElementById("pollId").value.trim();
+        const userId = document.getElementById("userId").value.trim();
+
+        if (!pollId || !userId) {
+            log("Poll ID and User ID are required to connect.");
+            return;
+        }
+
+        const url = `ws://localhost:8080/ws/poll/${pollId}?userId=${userId}`;
+        socket = new WebSocket(url);
+
+        socket.onopen = () => {
+            log("✅ Connected to WebSocket.");
+            document.getElementById("sendButton").disabled = false;
+        };
+        socket.onmessage = (event) => log("📩 " + event.data);
+        socket.onclose = () => {
+            log("❌ WebSocket connection closed.");
+            document.getElementById("sendButton").disabled = true;
+        };
+        socket.onerror = (err) => log("⚠️ WebSocket error: " + err);
+    }
+
+    function sendAction() {
+        const pollId = parseInt(document.getElementById("pollId").value);
+        const userId = parseInt(document.getElementById("userId").value);
+        const groupId = parseInt(document.getElementById("groupId").value);
+        const voteString = document.getElementById("voteString").value.trim();
+        const removeVote = document.getElementById("removeVote").value.trim();
+
+        let message = {};
+
+        if (voteString && !removeVote) {
+            message = {
+                userId: userId,
+                pollId: pollId,
+                groupId: groupId,
+                voteString: voteString
+            };
+        } else if (removeVote && !voteString) {
+            message = {
+                userId: userId,
+                pollId: pollId,
+                groupId: groupId,
+                removeVote: removeVote
+            };
+        } else {
+            log("⚠️ Only one of 'voteString' or 'removeVote' should be filled.");
+            return;
+        }
+
+        if (socket && socket.readyState === WebSocket.OPEN) {
+            socket.send(JSON.stringify(message));
+            log("📤 Sent: " + JSON.stringify(message));
+        } else {
+            log("⚠️ WebSocket not connected.");
+        }
+    }
+
+    function updateSendButton() {
+        const voteString = document.getElementById("voteString").value.trim();
+        const removeVote = document.getElementById("removeVote").value.trim();
+
+        // Enable button only if one (not both) of the two inputs is filled
+        const isEnabled = (voteString && !removeVote) || (removeVote && !voteString);
+        document.getElementById("sendButton").disabled = !isEnabled;
+    }
+</script>
+
+</body>
+</html>
