@@ -1,0 +1,1 @@
+This folder contains html files that can be used to test the web sockets
