@@ -128,32 +128,39 @@ public class GroupManagerController {
         EventGroup group = groupRepository.findById(groupId)
                 .orElseThrow(() -> new RuntimeException("Group not found"));
 
+        // Handle parent group linkage and poll cleanup
         EventGroup parent = group.getParentGroup();
         if (parent != null) {
             parent.getChildGroups().remove(group);
+            group.setParentGroup(null); // Ensure both sides are updated
+
             Poll parentPoll = parent.getPoll();
             if (parentPoll != null) {
                 parentPoll.getPollOptions().remove(group.getTitle());
+
                 List<PollVote> votes = pollVoteRepository.findByPoll(parentPoll);
                 List<PollVote> toDelete = votes.stream()
                         .filter(pv -> pv.getVotes().contains(group.getTitle()))
                         .toList();
                 pollVoteRepository.deleteAll(toDelete);
+
                 pollRepository.save(parentPoll);
             }
+
             groupRepository.saveAndFlush(parent);
         }
 
+        // Handle group’s own poll
         Poll groupPoll = group.getPoll();
         if (groupPoll != null) {
             List<PollVote> votes = pollVoteRepository.findByPoll(groupPoll);
             pollVoteRepository.deleteAll(votes);
 
-            groupPoll.setGroup(null);
-            pollRepository.saveAndFlush(groupPoll);
+            // If Poll has back-reference to EventGroup
+            // groupPoll.setGroup(null); <-- Only if this mapping exists
 
             group.setPoll(null);
-            groupRepository.saveAndFlush(group);
+            groupRepository.saveAndFlush(group); // Ensure null is persisted
 
             pollRepository.delete(groupPoll);
         }

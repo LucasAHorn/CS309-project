@@ -242,13 +242,22 @@ public class GroupTest {
 
 
 
+//    @Test
+//    public void test12_deleteSubGroup() {
+//        given()
+//                .contentType("application/json")
+//                .when()
+//                .delete("http://localhost:8080/group/" + subGroupId + "/" + modUser.getUserId())
+//                .then()
+//                .statusCode(200);
+//    }
 
     @Test
-    public void test99_deleteGroup() {
+    public void test13_deleteGroup() {
         given()
                 .contentType("application/json")
                 .when()
-                .delete("http://localhost:8080/group/" + subGroupId + "/" + modUser.getUserId())
+                .delete("http://localhost:8080/group/" + groupId + "/" + memberUser.getUserId())
                 .then()
                 .statusCode(200);
     }
